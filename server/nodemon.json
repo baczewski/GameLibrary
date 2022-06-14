@@ -1,0 +1,5 @@
+{
+    "watch": ["src", "knexfile.ts", "config.ts", ".env"],
+    "ext": "ts,json",
+    "exec": "ts-node src/express-server.ts"
+}

@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  server:
+    build: server/
+    ports:
+      - 3001:3001
+    depends_on:
+      - postgres
+    environment:
+      STEAM_SERVER_PORT: 3001
+      STEAM_DB_NAME: steam_project
+      STEAM_DB_USER: postgres
+      STEAM_DB_PASSWORD: postgres
+      STEAM_DB_HOST: postgres
+      STEAM_DB_PORT: 5432
+
+  postgres:
+    image: postgres:14.2-alpine
+    volumes:
+    - database_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: steam_project
+
+  client:
+    build: client/
+    ports:
+      - 3000:3001
+    environment:
+      PORT: 3001
+      REACT_APP_SERVER_URL: http://localhost:3001
+
+volumes:
+  database_data:

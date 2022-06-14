@@ -1,0 +1,38 @@
+body {
+    min-height: 1200px;
+    padding-bottom: 40px;
+    /* background: linear-gradient(to right, #434343 50%, rgb(10, 10, 10) 100%); */
+    /* background: linear-gradient(to right, #141e30, #1e344e); */
+    background: linear-gradient(to right, rgb(147, 148, 148), #8a8f90);
+}
+
+.welcome-info {
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.welcome-info h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.welcome-info p {
+    font-size: 24px;
+}
+
+.toggle-button {
+    margin: 20px 0px 0px 0px;
+    height: 60px;
+    width: 230px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border: none;
+    border-radius: 3px;
+    color: #FFFFFF;
+    background: linear-gradient(90deg, rgb(128, 130, 130) 0%, #434546 100%);
+}
+
+.toggle-button:hover {
+    box-shadow: 1px 1px 10px 1px #FFFFFF;
+}
